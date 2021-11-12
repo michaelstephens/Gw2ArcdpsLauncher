@@ -7,7 +7,6 @@ namespace Gw2ArcdpsLauncher
         static void Main(string[] args)
         {
             string arcdpsSource = $@"C:\Users\{Environment.UserName}\Downloads\d3d9.dll";
-            // string gw2Directory = @"D:\Program Files\Guild Wars 2\";
 
             Console.Write("Detecting GW2 install directory...");
             string gw2Directory = "";
