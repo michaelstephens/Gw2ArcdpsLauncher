@@ -8,6 +8,7 @@ namespace Gw2ArcdpsLauncher
         {
             string arcdpsSource = $@"C:\Users\{Environment.UserName}\Downloads\d3d9.dll";
 
+            // Detect Gw2 install
             Console.Write("Detecting GW2 install directory...");
             string gw2Directory = "";
 
@@ -37,6 +38,7 @@ namespace Gw2ArcdpsLauncher
                 Console.WriteLine($"GW2 install directory detected at {gw2Directory}!\n");
             }
 
+            // Download the latest Arcdps file
             Console.Write("Downloading Latest Arcdps...");
             using (var client = new System.Net.WebClient())
             {
@@ -63,6 +65,7 @@ namespace Gw2ArcdpsLauncher
                 }
             }
 
+            // Clean up downloaded file
             Console.Write("\nCleaning up Arcdps download...");
             File.Delete(arcdpsSource);
             Console.WriteLine("Done!\n");
